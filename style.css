@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'PT Serif', serif;
+}
+
+.navbar{
+    display: flex; /*move navbar next to logo*/
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right; /*move navbar to right side*/
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none; /*remove the <ul> dot*/
+}
+nav ul li{
+    display: inline-block; /*sort the navbar in HORIZONTAL style*/
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none; /*remove the <a> UNDERLINE link*/
+    color: #555;
+}
+p{
+    color: #555;
+}
+
+.container{
+    max-width: 1300px; /*width cannot be more than 1300px*/
+    margin: auto; /*the container will be at center*/
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex; /*allow flex inside the class row for col-2*/
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%; /*make the column SIDE-BY-SIDE*/
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px;
+    border-radius: 30px; /*Make the button round instead of rectangle*/
+    transition: 0.5s; /*to make time for hover part*/
+}
+.btn:hover{
+    background: #563434;
+}
+
+.header{
+    background: radial-gradient(#fff,#ffd6d6); /*set the background colour*/
+}
+.header .row{
+    margin-top: 70px;
+}
+
+.categories{
+    margin: 70px;
+}
+
+.col-3{
+    flex-basis: 30%; /*colum will occupy only 30% of the categories space*/
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+}
+
+.small-container{
+    max-width: 1080px; /*maximum width*/
+    margin: auto;
+    padding-left: 25px; /*make it look more neat*/
+    padding-right: 25px;
+}
+
+.col-4{
+    flex-basis: 25px;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+.col-4 img{
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+    content: ''; /*to create a line/space/blank space so that can use background as line*/
+    background: #ff523b;
+    width: 80px; /*the width fo the content*/
+    height: 5px; /*the height of the content*/
+    border-radius: 5px; /*make the line is not rectangle*/
+    position: absolute; /*fixed the line position*/
+    bottom: 0%; /*bring the line to bottom*/
+    left: 50%;  /*make it center*/
+    transform: translateX(-50%); /*make it center by combine it with left: 50%*/
+}
+
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+
+.rating .fa{
+    color: #ff523b; /*change the color of the star icon*/
+}
